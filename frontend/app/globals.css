@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0d1117;
+    color: #e6edf3;
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #161b22;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3fb950;
+  }
+
+  /* Focus rings */
+  *:focus-visible {
+    outline: 2px solid #3fb950;
+    outline-offset: 2px;
+  }
+
+  input, textarea, select {
+    background-color: #1c2333;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px;
+    color: #e6edf3;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    width: 100%;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3fb950;
+    box-shadow: 0 0 0 3px rgba(63,185,80,0.12);
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: #7d8590;
+  }
+
+  select option {
+    background-color: #161b22;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-gd-surface border border-gd-border rounded-xl p-4;
+  }
+
+  .card-title {
+    @apply text-sm font-semibold text-gd-text mb-4 flex items-center justify-between;
+  }
+
+  .stat-card {
+    @apply bg-gd-surface border border-gd-border rounded-xl p-4;
+  }
+
+  .btn-primary {
+    @apply bg-gd-accent text-gd-bg font-semibold text-sm px-4 py-2 rounded-lg 
+           hover:opacity-85 active:scale-95 transition-all duration-150 
+           flex items-center gap-2 cursor-pointer border-0;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-gd-muted text-sm px-4 py-2 rounded-lg 
+           border border-gd-border hover:text-gd-text hover:bg-white/5 
+           transition-all duration-150 cursor-pointer;
+  }
+
+  .btn-danger {
+    @apply bg-transparent text-gd-red text-xs px-3 py-1.5 rounded-md 
+           border border-gd-red/30 hover:bg-gd-red/10 transition-all duration-150 cursor-pointer;
+  }
+
+  .badge-streak {
+    @apply text-xs px-2 py-0.5 rounded bg-gd-accent/10 text-gd-accent;
+  }
+
+  .badge-grace {
+    @apply text-xs px-2 py-0.5 rounded bg-gd-amber/10 text-gd-amber;
+  }
+
+  .badge-missed {
+    @apply text-xs px-2 py-0.5 rounded bg-gd-red/10 text-gd-red;
+  }
+
+  .nav-link {
+    @apply text-gd-muted text-sm px-3 py-2 rounded-lg flex items-center gap-2
+           hover:text-gd-text hover:bg-white/5 transition-all duration-150 cursor-pointer;
+  }
+
+  .nav-link.active {
+    @apply text-gd-text bg-gd-accent/10;
+  }
+
+  .progress-bar {
+    @apply h-1.5 rounded-full bg-gd-surface2 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full bg-gd-accent transition-all duration-500;
+  }
+
+  .form-label {
+    @apply block text-xs text-gd-muted mb-1.5 font-medium uppercase tracking-wide;
+  }
+
+  .toggle {
+    @apply relative inline-flex h-5 w-9 items-center rounded-full 
+           bg-gd-surface2 border border-gd-border transition-colors duration-200;
+  }
+
+  .toggle.on {
+    @apply bg-gd-accent/20 border-gd-accent;
+  }
+
+  .toggle-thumb {
+    @apply inline-block h-3.5 w-3.5 rounded-full bg-gd-muted 
+           transform transition-transform duration-200 translate-x-0.5;
+  }
+
+  .toggle.on .toggle-thumb {
+    @apply translate-x-[18px] bg-gd-accent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.25s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.15s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}

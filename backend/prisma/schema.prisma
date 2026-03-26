@@ -1,0 +1,60 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  createdAt    DateTime @default(now()) @map("created_at")
+  habits       Habit[]
+
+  @@map("users")
+}
+
+model Habit {
+  id            String        @id @default(uuid())
+  userId        String        @map("user_id")
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  description   String?
+  frequencyType FrequencyType @default(DAILY) @map("frequency_type")
+  customDays    String[]      @default([]) @map("custom_days")
+  hasGraceDay   Boolean       @default(false) @map("has_grace_day")
+  isActive      Boolean       @default(true) @map("is_active")
+  createdAt     DateTime      @default(now()) @map("created_at")
+  logs          HabitLog[]
+
+  @@map("habits")
+}
+
+model HabitLog {
+  id        String    @id @default(uuid())
+  habitId   String    @map("habit_id")
+  habit     Habit     @relation(fields: [habitId], references: [id], onDelete: Cascade)
+  date      DateTime  @db.Date
+  status    LogStatus
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  @@unique([habitId, date])
+  @@map("habit_logs")
+}
+
+enum FrequencyType {
+  DAILY
+  CUSTOM
+}
+
+enum LogStatus {
+  COMPLETED
+  MISSED
+  GRACE
+}
