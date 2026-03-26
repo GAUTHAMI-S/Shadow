@@ -169,7 +169,7 @@ export default function HabitModal({ open, onClose, habit }: HabitModalProps) {
           {/* Grace day toggle */}
           <div className="flex items-center justify-between p-3 rounded-xl bg-gd-surface2 border border-gd-border">
             <div>
-              <p className="text-sm font-medium text-gd-text">Grace Day</p>
+              <p className="text-sm font-medium text-gd-text">Shadow</p>
               <p className="text-xs text-gd-muted mt-0.5">Missing one day won't break your streak</p>
             </div>
             <button

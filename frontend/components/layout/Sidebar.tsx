@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation';
 import { FiGrid, FiCheckSquare, FiCalendar, FiBarChart2, FiSettings } from 'react-icons/fi';
 
 const LINKS = [
-  { href: '/dashboard', label: 'Overview',      icon: FiGrid },
   { href: '/dashboard', label: "Today's Habits", icon: FiCheckSquare },
   { href: '/calendar',  label: 'Calendar',       icon: FiCalendar },
   { href: '/analytics', label: 'Analytics',      icon: FiBarChart2 },

@@ -243,9 +243,9 @@ export default function SettingsPage() {
             <span className="text-gd-accent text-sm">📲</span>
           </div>
           <div>
-            <p className="text-sm font-medium text-gd-text">Install Grace Day</p>
+            <p className="text-sm font-medium text-gd-text">Install Shadow</p>
             <p className="text-xs text-gd-muted mt-1">
-              Add Grace Day to your home screen for the best experience. On mobile, tap the browser menu → "Add to Home Screen". On desktop, click the install icon in the address bar.
+              Add Shadow to your home screen for the best experience. On mobile, tap the browser menu → "Add to Home Screen". On desktop, click the install icon in the address bar.
             </p>
           </div>
         </div>

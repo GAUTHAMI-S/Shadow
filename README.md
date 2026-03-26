@@ -1,4 +1,4 @@
-# Grace Day — Habit Tracker PWA
+# Shadow — Habit Tracker PWA
 
 A production-ready habit tracker with streak protection via **grace days**.  
 Built with **Next.js 14 · Express · PostgreSQL · Prisma · Tailwind CSS · JWT Auth**.

@@ -16,13 +16,14 @@ export default function Navbar() {
   const { user, logout } = useAuthStore();
 
   return (
-    <header className="bg-gd-surface border-b border-gd-border h-14 flex items-center px-5 gap-3 flex-shrink-0 z-40">
+    <header className="bg-gd-surface border-b border-gd-border h-14 flex items-center justify-between px-5 gap-3 flex-shrink-0 z-40">
       {/* Logo */}
-      <Link href="/dashboard" className="flex items-center gap-2 mr-4">
-        <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-gd-accent to-gd-blue flex items-center justify-center flex-shrink-0">
+      <Link href="/dashboard" className="flex items-center gap-1 mr-4">
+        {/* <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-gd-accent to-gd-blue flex items-center justify-center flex-shrink-0">
           <FiZap size={14} className="text-gd-bg" />
-        </div>
-        <span className="font-bold text-sm text-gd-text hidden sm:block">Grace Day</span>
+        </div> */}
+          <img src="/logo.png" alt="logo" className="w-12 h-12" />
+        <span className="font-bold text-md text-gd-text hidden sm:block">Shadow</span>
       </Link>
 
       {/* Desktop Nav */}
@@ -46,24 +47,22 @@ export default function Navbar() {
         })}
       </nav>
 
-      <div className="flex-1" />
+     
 
       {/* Right side */}
       <div className="flex items-center gap-2">
-        <button className="w-8 h-8 rounded-lg flex items-center justify-center text-gd-muted hover:text-gd-text hover:bg-white/5 transition-all">
-          <FiBell size={15} />
-        </button>
+    
         <div className="flex items-center gap-2 pl-2 border-l border-gd-border">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gd-blue to-gd-purple flex items-center justify-center text-xs font-semibold text-white flex-shrink-0">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gd-blue to-gd-purple flex items-center justify-center text-md font-semibold text-white flex-shrink-0">
             {user?.name?.charAt(0).toUpperCase() || 'U'}
           </div>
-          <span className="text-xs text-gd-muted hidden sm:block max-w-[100px] truncate">{user?.name}</span>
+          <span className="text-md text-gd-muted hidden sm:block max-w-[100px] truncate">{user?.name}</span>
           <button
             onClick={logout}
             className="w-7 h-7 rounded-lg flex items-center justify-center text-gd-muted hover:text-gd-red hover:bg-gd-red/10 transition-all ml-1"
             title="Sign out"
           >
-            <FiLogOut size={13} />
+            <FiLogOut size={15} />
           </button>
         </div>
       </div>

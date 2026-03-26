@@ -46,7 +46,7 @@ export default function DashboardPage() {
       <div className="flex items-start justify-between">
         <div>
           <h1 className="text-lg font-semibold text-gd-text">
-            Good {getGreeting()}, {user?.name?.split(' ')[0] || 'there'} 👋
+            Good {getGreeting()}, {user?.name?.split(' ')[0] || 'there'} 
           </h1>
           <p className="text-sm text-gd-muted mt-0.5">{today}</p>
         </div>

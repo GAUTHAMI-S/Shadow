@@ -1,6 +1,6 @@
 {
-  "name": "Grace Day — Habit Tracker",
-  "short_name": "Grace Day",
+  "name": "Shadow — Habit Tracker",
+  "short_name": "Shadow",
   "description": "Track habits with streak protection via grace days",
   "start_url": "/dashboard",
   "display": "standalone",
