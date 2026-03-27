@@ -41,12 +41,12 @@ export default function SignupPage() {
 
   return (
     <div>
-      <div className="flex items-center gap-3 mb-8 justify-center">
-        {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gd-accent to-gd-blue flex items-center justify-center"> */}
-          {/* <FiZap size={18} className="text-gd-bg" /> */}
-        {/* </div> */}
-          <img src="/logo.png" alt="logo" className="w-11 h-11" />
-        <span className="text-xl font-bold text-gd-text">Shadow</span>
+      <div className="flex flex-col items-center gap-1 mb-8 justify-center">
+        <img src="/logo.png" alt="logo" className="w-40 h-40" />
+        {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-gd-accent to-gd-blue flex items-center justify-center">
+          <FiZap size={18} className="text-gd-bg" />
+        </div> */}
+        <span className="text-2xl font-bold text-gd-text">Shadow</span>
       </div>
 
       <div className="card animate-fade-in">

@@ -107,7 +107,7 @@ export default function CalendarPage() {
       <div className="flex items-start gap-3 p-3 rounded-xl bg-gd-blue/5 border border-gd-blue/15 text-xs text-gd-muted">
         <span className="text-gd-blue mt-0.5">💡</span>
         <p>
-          <span className="text-gd-text font-medium">Shadow</span> appear in amber — they protect your streak
+          <span className="text-gd-text font-medium">Grace Day</span> appear in amber — they protect your streak
           when you miss a scheduled day. Each grace-enabled habit gets one grace day per streak.
         </p>
       </div>
