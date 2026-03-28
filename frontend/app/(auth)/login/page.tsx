@@ -36,8 +36,11 @@ export default function LoginPage() {
       </div>
 
       <div className="card animate-fade-in">
-        <h1 className="text-lg font-semibold text-gd-text mb-1">Welcome back</h1>
-        <p className="text-sm text-gd-muted mb-6">Sign in to continue your streak</p>
+        <div className='text-center'>
+
+          <h1 className="text-lg font-semibold text-gd-text mb-1">Welcome back</h1>
+          <p className="text-sm text-gd-muted mb-6">Sign in to continue your streak</p>
+        </div>
 
         {error && (
           <div className="mb-4 p-3 rounded-lg bg-gd-red/10 border border-gd-red/20 text-gd-red text-sm">
