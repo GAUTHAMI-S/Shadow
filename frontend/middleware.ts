@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 const PUBLIC_PATHS = ['/login', '/signup'];
 
-export function middleware(req: NextRequest) {
+export function middleware(req) {
   const token = req.cookies.get('gd_token')?.value;
   const { pathname } = req.nextUrl;
 
