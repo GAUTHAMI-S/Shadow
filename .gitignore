@@ -9,7 +9,7 @@ dist/
 out/
 build/
 
-# Environment files
+# Environment files — NEVER commit these
 .env
 .env.local
 .env.production
@@ -29,13 +29,18 @@ Thumbs.db
 backend/src/prisma/*.db
 backend/src/prisma/*.db-journal
 
-# PWA generated files
+# PWA generated files (@ducanh2912/next-pwa and next-pwa)
 frontend/public/sw.js
+frontend/public/sw.js.map
 frontend/public/workbox-*.js
+frontend/public/workbox-*.js.map
 frontend/public/worker-*.js
+frontend/public/worker-*.js.map
 frontend/public/fallback-*.js
+frontend/public/fallback-*.js.map
+frontend/public/ngsw.json
 
-# Typescript
+# TypeScript
 *.tsbuildinfo
 next-env.d.ts
 
